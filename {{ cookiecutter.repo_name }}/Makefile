@@ -19,6 +19,15 @@ endif
 #################################################################################
 # COMMANDS                                                                      #
 #################################################################################
+## Make experiments
+run:
+	cd ./data/ && mlflow run ../models/${MODEL} --no-conda.
+
+
+## Make ui
+ui:
+	cd ./data/ && mlflow ui
+
 
 ## Install Python Dependencies
 requirements: test_environment
